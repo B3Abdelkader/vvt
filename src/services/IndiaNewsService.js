@@ -11,5 +11,8 @@ var NewsAPI = axios.create({
   export default{
       getNews(){
           return NewsAPI.get()
-      }
+      },
+      getNews(id){
+        return NewsAPI.get()
+    }
   }
