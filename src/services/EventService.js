@@ -8,10 +8,10 @@ var EventAPI = axios.create({
         'x-rapidapi-host': 'public-holiday.p.rapidapi.com',
         'x-rapidapi-key': '69ab445655msh22f23b05a7b7933p183b10jsnfcd698fa2efa'
     }
-  });
+});
 
-  export default{
-      getEvents(){
-          return EventAPI.get('/2019/US')
-      }
-  }
+export default {
+    getEvents() {
+        return EventAPI.get('/2019/US')
+    }
+}
