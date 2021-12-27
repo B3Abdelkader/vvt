@@ -21,8 +21,12 @@
                 <div class="m-7">
                     <form @submit.prevent="onSubmit" id="form">
                         <div class="mb-6">
-                        <label class="text-gray-400 dark:text-gray-400">Select a category</label>
-                        <select v-model="event.category" class="
+                            <label class="text-gray-400 dark:text-gray-400"
+                                >Select a category</label
+                            >
+                            <select
+                                v-model="event.category"
+                                class="
                                     w-full
                                     h-8
                                     rounded-md
@@ -30,18 +34,18 @@
                                     focus:ring
                                     focus:ring-indigo-100
                                     focus:border-indigo-300
-                                    dark:text-white
-                                    dark:focus:ring-gray-900
-                                ">
-                            <option
-                                v-for="option in categories"
-                                :value="option.toLowerCase()"
-                                :key="option"
-                                :selected="option === event.category"
+                                    dark:text-white dark:focus:ring-gray-900
+                                "
                             >
-                                {{ option }}
-                            </option>
-                        </select>
+                                <option
+                                    v-for="option in categories"
+                                    :value="option.toLowerCase()"
+                                    :key="option"
+                                    :selected="option === event.category"
+                                >
+                                    {{ option }}
+                                </option>
+                            </select>
                         </div>
                         <div class="mb-6">
                             <input
@@ -72,7 +76,7 @@
                                 "
                             />
                         </div>
-                        
+
                         <div class="mb-6">
                             <input
                                 type="email"
@@ -198,6 +202,7 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from 'uuid'
 export default {
     data() {
         return {
@@ -209,12 +214,13 @@ export default {
                 email: '',
                 phone: '',
                 message: '',
-                creator:''
+                creator: '',
             },
         }
     },
     methods: {
         onSubmit() {
+            this.event.id = uuidv4()
             this.event.creator = this.$store.state.creator
             console.log('Event', this.event)
         },
