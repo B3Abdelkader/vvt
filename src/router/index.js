@@ -22,7 +22,7 @@ const routes = [
         component: EventPage,
     },
     {
-        path: '/add-event',
+        path: '/event/create',
         name: 'CreateEventPage',
         component: CreateEventPage,
     },
