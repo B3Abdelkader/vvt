@@ -215,6 +215,7 @@ export default {
     },
     methods: {
         onSubmit() {
+            this.event.creator = this.$store.state.creator
             console.log('Event', this.event)
         },
     },
