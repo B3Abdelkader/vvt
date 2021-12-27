@@ -3,6 +3,7 @@ import HomeCp from '/src/components/HomeCp.vue'
 import AboutCp from '/src/components/AboutCp.vue'
 import EventPage from '/src/views/EventPage.vue'
 import IndiaNewsPage from '/src/views/IndiaNewsPage.vue'
+import CreateEventPage from '/src/views/CreateEventPage.vue'
 
 const routes = [
     {
@@ -19,6 +20,11 @@ const routes = [
         path: '/event',
         name: 'EventPage',
         component: EventPage,
+    },
+    {
+        path: '/add-event',
+        name: 'CreateEventPage',
+        component: CreateEventPage,
     },
     {
         path: '/news',

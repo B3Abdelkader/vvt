@@ -24,11 +24,24 @@
         <button
             @click="saveName"
             class="
-                ring-2 ring-purple-500 ring-offset-4 ring-offset-purple-100
-                ...
+                px-2
+                py-1
+                rounded-md
+                text-sm
+                font-medium
+                border
+                shadow
+                focus:outline-none focus:ring
+                transition
+                text-purple-600
+                bg-purple-50
+                border-purple-200
+                hover:bg-purple-100
+                active:bg-purple-200
+                focus:ring-purple-300
             "
         >
-            Submit
+            Envoyer
         </button>
     </div>
 </template>
