@@ -6,13 +6,13 @@ var NewsAPI = axios.create({
         'Accept': 'application/json',
         'Content-Type': 'application/json',
     }
-  });
+});
 
-  export default{
-      getNews(){
-          return NewsAPI.get()
-      },
-      getNews(id){
+export default {
+    getNews() {
+        return NewsAPI.get()
+    },
+    getNews(id) {
         return NewsAPI.get()
     }
-  }
+}
