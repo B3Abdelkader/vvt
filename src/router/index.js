@@ -5,6 +5,7 @@ import EventPage from '/src/views/EventPage.vue'
 import IndiaNewsPage from '/src/views/IndiaNewsPage.vue'
 import CreateEventPage from '/src/views/CreateEventPage.vue'
 import EventDetailPage from '/src/views/EventDetailPage.vue'
+import ErrorPage from '/src/views/ErrorPage.vue'
 
 const routes = [
     {
@@ -37,6 +38,12 @@ const routes = [
         path: '/news',
         name: 'IndiaNewsPage',
         component: IndiaNewsPage,
+    },
+    {
+        path: '/error/:error',
+        name: 'ErrorPage',
+        props: true,
+        component: ErrorPage
     }
 ]
 

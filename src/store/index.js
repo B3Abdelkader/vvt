@@ -32,19 +32,21 @@ const store = createStore({
                 })
                 .catch(error => {
                     console.log(error);
+                    throw(error);
                 })
             console.log('Event', this.event)
         },
         fetchEvents({
             commit
         }) {
-            EventService.getEvents()
+            return EventService.getEvents()
                 .then((response) => {
                     commit('SET_EVENTS', response.data)
                     console.log(response.data)
                 })
                 .catch((error) => {
-                    console.error(error)
+                    console.log(error);
+                    throw(error);
                 })
         },
         fetchEvent({
@@ -55,13 +57,14 @@ const store = createStore({
             if (exisitingEvent) {
                 commit('SET_EVENT', exisitingEvent)
             } else {
-                EventService.getEvent(id)
+                return EventService.getEvent(id)
                     .then((response) => {
                         commit('SET_EVENT', response.data)
                         console.log(response.data)
                     })
                     .catch((error) => {
-                        console.error(error)
+                        console.log(error);
+                    throw(error);
                     })
             }
         }

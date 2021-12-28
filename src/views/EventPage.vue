@@ -17,6 +17,12 @@ export default {
     components: { EventCardCp },
     created() {
     this.$store.dispatch('fetchEvents')
+    .catch(error => {
+                this.$router.push({
+                    name:'ErrorPage',
+                    params:{error:error} //error est transmis a 'ErrorPage' comme une props
+                })
+            })
     },
     computed:{
         events(){

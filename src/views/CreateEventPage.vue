@@ -232,6 +232,11 @@ export default {
                     name:'EventDetailPage',
                     params: {id: event.id}
                 })
+            }).catch(error => {
+                this.$router.push({
+                    name:'ErrorPage',
+                    params:{error:error} //error est transmis a 'ErrorPage' comme une props
+                })
             })
         },
     },
