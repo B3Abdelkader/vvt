@@ -13,7 +13,7 @@ const store = createStore({
         ADD_EVENT(state, event) {
             state.events.push(event)
         },
-        SET_EVENT(state, events){
+        SET_EVENT(state, events) {
             state.events = events
         }
     },
@@ -31,15 +31,35 @@ const store = createStore({
                 })
             console.log('Event', this.event)
         },
-        fetchEvents({commit}){
+        fetchEvents({
+            commit
+        }) {
             EventService.getEvents()
-            .then((response) => {
-                commit('SET_EVENT', response.data)
-                console.log(response.data)
-            })
-            .catch((error) => {
-                console.error(error)
-            })
+                .then((response) => {
+                    commit('SET_EVENT', response.data)
+                    console.log(response.data)
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
+        },
+        fetchEvent({
+            commit,
+            state
+        }, id) {
+            const exisitingEvent = state.events.find(x => x.id === id)
+            if (exisitingEvent) {
+                commit('SET_EVENT', exisitingEvent)
+            } else {
+                EventService.getEvents()
+                    .then((response) => {
+                        commit('SET_EVENT', response.data)
+                        console.log(response.data)
+                    })
+                    .catch((error) => {
+                        console.error(error)
+                    })
+            }
         }
     },
     modules: {

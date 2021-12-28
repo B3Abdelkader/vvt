@@ -11,15 +11,10 @@
 
 <script>
 import EventCardCp from '../components/EventCardCp.vue'
-import EventService from '../services/EventService.js'
+
 export default {
     name: 'eventPage',
     components: { EventCardCp },
-    // data() {  NOT REACTIVE ENOUGHT
-    //     return { 
-    //         events: null,
-    //     }
-    // },
     created() {
     this.$store.dispatch('fetchEvents')
     },
