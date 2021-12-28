@@ -199,6 +199,7 @@
             </div>
         </div>
     </div>
+    <div>{{$store.state.events}}</div>
 </template>
 
 <script>
@@ -230,6 +231,7 @@ export default {
                 .then(() =>
                 {
                     // add vueX state
+                    this.$store.commit('ADD_EVENT', event)
                 })
                 .catch(error =>{
                     console.log(error);
