@@ -15,21 +15,19 @@ import EventService from '../services/EventService.js'
 export default {
     name: 'eventPage',
     components: { EventCardCp },
-    data() {
-        return {
-            events: null,
-        }
-    },
+    // data() {  NOT REACTIVE ENOUGHT
+    //     return { 
+    //         events: null,
+    //     }
+    // },
     created() {
-        EventService.getEvents()
-            .then((response) => {
-                this.events = response.data
-                console.log(response.data)
-            })
-            .catch((error) => {
-                console.error(error)
-            })
+    this.$store.dispatch('fetchEvents')
     },
+    computed:{
+        events(){
+    return this.$store.state.events
+}
+    }
 }
 </script>
 

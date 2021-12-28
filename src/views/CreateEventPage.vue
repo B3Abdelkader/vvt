@@ -204,7 +204,7 @@
 
 <script>
 import { v4 as uuidv4 } from 'uuid'
-import EventService from '../services/EventService'
+
 export default {
     data() {
         return {
@@ -227,16 +227,7 @@ export default {
                 id: uuidv4(),
                 creator:this.$store.state.creator
             }
-            EventService.postEvent(event)
-                .then(() =>
-                {
-                    // add vueX state
-                    this.$store.commit('ADD_EVENT', event)
-                })
-                .catch(error =>{
-                    console.log(error);
-                })
-            console.log('Event', this.event)
+            this.$store.dispatch('createEvent', event)
         },
     },
 }
