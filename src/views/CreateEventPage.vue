@@ -227,7 +227,12 @@ export default {
                 id: uuidv4(),
                 creator:this.$store.state.creator
             }
-            this.$store.dispatch('createEvent', event)
+            this.$store.dispatch('createEvent', event).then(() => {
+                this.$router.push({
+                    name:'EventDetailPage',
+                    params: {id: event.id}
+                })
+            })
         },
     },
 }
