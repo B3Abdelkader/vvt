@@ -4,6 +4,7 @@ import AboutCp from '/src/components/AboutCp.vue'
 import EventPage from '/src/views/EventPage.vue'
 import IndiaNewsPage from '/src/views/IndiaNewsPage.vue'
 import CreateEventPage from '/src/views/CreateEventPage.vue'
+import EventDetailPage from '/src/views/EventDetailPage.vue'
 
 const routes = [
     {
@@ -20,6 +21,12 @@ const routes = [
         path: '/events',
         name: 'EventPage',
         component: EventPage,
+    },
+    {
+        path: '/events/:id',
+        name: 'EventDetailPage',
+        props: true,
+        component: EventDetailPage
     },
     {
         path: '/event/create',

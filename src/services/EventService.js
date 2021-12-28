@@ -15,7 +15,7 @@ export default {
         return EventAPI.get('/events')
     },
     getEvent(id) {
-        return EventAPI.get('/event/'+id)
+        return EventAPI.get('/events/'+id)
     },
     postEvent(event){
         return EventAPI.post('/events', event)

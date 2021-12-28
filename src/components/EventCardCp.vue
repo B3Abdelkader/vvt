@@ -1,5 +1,6 @@
 <template>
     <!-- Card ICI -->
+    <router-link :to="{name: 'EventDetailPage', params:{id: event.id} }">
     <div class="grid justify-items-center select-none">
         <div
             class="
@@ -28,12 +29,13 @@
                 </div>
                 <p class="text-gray-400 text-xs">
                     @{{ event.creator }}/{{ event.email }} on
-                    {{ event.message }}
+                    <span>{{ event.message }}</span>
                 </p>
                 <!-- <p class="text-gray-500 leading-4" v-for="province in event.provinces" :key="province.id" :event="province">Provinces : {{event.province}};  </p> -->
             </div>
         </div>
     </div>
+    </router-link>
 </template>
 
 <script>

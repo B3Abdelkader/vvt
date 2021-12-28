@@ -7,14 +7,18 @@ import EventService from '../services/EventService.js'
 const store = createStore({
     state: {
         creator: 'Abdelkader BENABDALLAH',
-        events: []
+        events: [],
+        event:{}
     },
     mutations: {
         ADD_EVENT(state, event) {
             state.events.push(event)
         },
-        SET_EVENT(state, events) {
+        SET_EVENTS(state, events) {
             state.events = events
+        },
+        SET_EVENT(state, event) {
+            state.event = event
         }
     },
     actions: {
@@ -24,7 +28,7 @@ const store = createStore({
             EventService.postEvent(event)
                 .then(() => {
                     // add vueX state
-                    commit('ADD_EVENT', event)
+                    commit('ADD_EVENTS', event)
                 })
                 .catch(error => {
                     console.log(error);
@@ -36,7 +40,7 @@ const store = createStore({
         }) {
             EventService.getEvents()
                 .then((response) => {
-                    commit('SET_EVENT', response.data)
+                    commit('SET_EVENTS', response.data)
                     console.log(response.data)
                 })
                 .catch((error) => {
@@ -51,7 +55,7 @@ const store = createStore({
             if (exisitingEvent) {
                 commit('SET_EVENT', exisitingEvent)
             } else {
-                EventService.getEvents()
+                EventService.getEvent(id)
                     .then((response) => {
                         commit('SET_EVENT', response.data)
                         console.log(response.data)
