@@ -2,7 +2,7 @@
   "name": "vvt",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite & json-server --watch db.json --port 3004 serve",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },

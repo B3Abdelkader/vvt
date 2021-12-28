@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 var EventAPI = axios.create({
-    baseURL: 'https://public-holiday.p.rapidapi.com',
+    baseURL: 'http://localhost:3004',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -12,6 +12,9 @@ var EventAPI = axios.create({
 
 export default {
     getEvents() {
-        return EventAPI.get('/2019/US')
+        return EventAPI.get('/events')
+    },
+    postEvent(event){
+        return EventAPI.post('/events', event)
     }
 }

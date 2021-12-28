@@ -23,12 +23,12 @@
                             truncate
                             overflow-hidden
                         "
-                        >{{ event.localName }}</span
+                        >{{ event.category.toUpperCase() }}</span
                     >
                 </div>
                 <p class="text-gray-400 text-xs">
-                    @{{ event.countryCode }}/{{ event.type }} on
-                    {{ event.date }}
+                    @{{ event.creator }}/{{ event.email }} on
+                    {{ event.message }}
                 </p>
                 <!-- <p class="text-gray-500 leading-4" v-for="province in event.provinces" :key="province.id" :event="province">Provinces : {{event.province}};  </p> -->
             </div>

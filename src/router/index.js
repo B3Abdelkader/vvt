@@ -17,7 +17,7 @@ const routes = [
         component: AboutCp,
     },
     {
-        path: '/event',
+        path: '/events',
         name: 'EventPage',
         component: EventPage,
     },

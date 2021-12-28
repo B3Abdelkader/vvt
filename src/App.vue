@@ -31,7 +31,7 @@
                 px-2
                 bg-teal-50
             "
-            to="/event"
+            to="/events"
             ><a href="#" class="align-middle">Events</a></router-link
         >
         <router-link
