@@ -14,9 +14,10 @@ import EventCardCp from '../components/EventCardCp.vue'
 
 export default {
     name: 'eventPage',
+    props:['page'],
     components: { EventCardCp },
     created() {
-    this.$store.dispatch('fetchEvents')
+    this.$store.dispatch('fetchEvents', this.page)
     .catch(error => {
                 this.$router.push({
                     name:'ErrorPage',

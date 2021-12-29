@@ -11,13 +11,13 @@ var EventAPI = axios.create({
 });
 
 export default {
-    getEvents() {
-        return EventAPI.get('/events')
+    getEvents(perPage, page) {
+        return EventAPI.get('/events?_limit=' + perPage + '&_page=' + page)
     },
     getEvent(id) {
-        return EventAPI.get('/events/'+id)
+        return EventAPI.get('/events/' + id)
     },
-    postEvent(event){
+    postEvent(event) {
         return EventAPI.post('/events', event)
     }
 }

@@ -38,8 +38,8 @@ const store = createStore({
         },
         fetchEvents({
             commit
-        }) {
-            return EventService.getEvents()
+        }, page) {
+            return EventService.getEvents(2, page)
                 .then((response) => {
                     commit('SET_EVENTS', response.data)
                     console.log(response.data)

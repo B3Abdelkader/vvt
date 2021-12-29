@@ -22,6 +22,7 @@ const routes = [
         path: '/events',
         name: 'EventPage',
         component: EventPage,
+        props: route =>({page: parseInt(route.query.page) || 1}) //Si la page exist parse la valeur en Int, sinon affiche la page avec la valeur 1:page
     },
     {
         path: '/events/:id',
