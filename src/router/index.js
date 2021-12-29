@@ -1,4 +1,7 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+    createRouter,
+    createWebHistory
+} from "vue-router";
 import HomeCp from '/src/components/HomeCp.vue'
 import AboutCp from '/src/components/AboutCp.vue'
 import EventPage from '/src/views/EventPage.vue'
@@ -7,8 +10,7 @@ import CreateEventPage from '/src/views/CreateEventPage.vue'
 import EventDetailPage from '/src/views/EventDetailPage.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         name: 'HomeCp',
         component: HomeCp,
@@ -22,7 +24,9 @@ const routes = [
         path: '/events',
         name: 'EventPage',
         component: EventPage,
-        props: route =>({page: parseInt(route.query.page) || 1}) //Si la page exist parse la valeur en Int, sinon affiche la page avec la valeur 1:page
+        props: route => ({
+            page: parseInt(route.query.page) || 1
+        }) //Si la page exist parse la valeur en Int, sinon affiche la page avec la valeur 1:page
     },
     {
         path: '/events/:id',
