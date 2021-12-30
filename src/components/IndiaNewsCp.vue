@@ -11,6 +11,7 @@
             hover:-translate-y-1
             transition-all
             duration-200
+            
         "
     >
         <div class="m-3">
@@ -18,15 +19,16 @@
                 {{ news.title }}
                 <span
                     class="
-                        text-sm text-teal-800
+                        text-sm text-blue-100
                         font-mono
-                        bg-teal-100
+                        bg-violet-600
                         inline
                         rounded-full
                         px-2
                         align-top
                         float-right
                         animate-pulse
+                        
                     "
                     >{{ news.publishedAt }}</span
                 >
