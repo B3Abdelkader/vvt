@@ -3,7 +3,6 @@ import {
 } from "vuex";
 import user from "../store/modules/user.js"
 import EventService from '../services/EventService.js'
-import linq from 'linq'
 
 const store = createStore({
     state: {

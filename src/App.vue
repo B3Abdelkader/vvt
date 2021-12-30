@@ -5,62 +5,82 @@
 
 <template>
     <header class="p-4 shadow-sm">
-        <div class="inline-block text-lg"><h1>B3Abdelkader</h1></div>
+        <div class="inline-block text-lg">
+            <h1>
+                <span
+                    class="
+                        before:block
+                        before:absolute
+                        before:-inset-1
+                        before:-skew-y-3
+                        before:bg-violet-400
+                        relative
+                        inline-block
+                    "
+                    ><span class="relative text-white">B3Abdelkader</span></span
+                >
+            </h1>
+        </div>
+
         <router-link
             class="
                 inline-block
                 top-auto
-                text-teal-800
+                text-gray-600
                 float-right
                 rounded-full
                 mx-1
                 px-2
-                bg-teal-50
+                bg-violet-100
+                hover:animate-pulse
             "
             to="/"
-            ><a href="#" class="align-middle"></a>Home</router-link
+            >Home</router-link
         >
         <router-link
             class="
                 inline-block
                 top-auto
-                text-teal-800
+                text-gray-600
                 float-right
                 rounded-full
                 mx-1
                 px-2
-                bg-teal-50
+                bg-violet-100
+                hover:animate-pulse
             "
             to="/events"
-            ><a href="#" class="align-middle">Events</a></router-link
+            >Events</router-link
         >
         <router-link
             class="
                 inline-block
                 top-auto
-                text-teal-800
+                text-gray-600
                 float-right
                 rounded-full
                 mx-1
                 px-2
-                bg-teal-50
+                bg-violet-100
+                hover:animate-pulse
             "
             to="/about"
-            ><a href="#" class="align-middle">About</a></router-link
+            >About</router-link
         >
         <router-link
             class="
                 inline-block
                 top-auto
-                text-teal-800
+                text-gray-600
                 float-right
                 rounded-full
                 mx-1
                 px-2
-                bg-teal-50
+                bg-violet-100
+                hover:animate-pulse
             "
             to="/news"
-            ><a href="#" class="align-middle">India News</a></router-link
+            >India News</router-link
         >
     </header>
     <router-view />
