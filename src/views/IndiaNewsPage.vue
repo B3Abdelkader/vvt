@@ -23,8 +23,8 @@ export default {
     created() {
         IndiaNewsService.getNews()
             .then((response) => {
-                this.NewsObject = response.data.articles
-                console.log(response.data.articles)
+                this.NewsObject = linq.from(response.data.articles).where(x => x.content).toArray()
+                console.log(response.data)
             })
             .catch((error) => {
                 console.error(error)
