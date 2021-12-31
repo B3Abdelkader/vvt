@@ -9,15 +9,18 @@
             <h1>
                 <span
                     class="
-                        before:block
-                        before:absolute
-                        before:-inset-1
-                        before:-skew-y-3
-                        before:bg-violet-400
-                        relative
                         inline-block
+                        top-auto
+                        text-gray-600
+                        float-right
+                        rounded-full
+                        mx-1
+                        px-2
+                        py-2
+                        bg-violet-100
+                        font-thin
                     "
-                    ><span class="relative text-white">B3Abdelkader</span></span
+                    >B3Abdelkader</span
                 >
             </h1>
         </div>
@@ -33,6 +36,7 @@
                 px-2
                 bg-violet-100
                 hover:animate-pulse
+                font-thin
             "
             to="/"
             >Home</router-link
@@ -48,6 +52,7 @@
                 px-2
                 bg-violet-100
                 hover:animate-pulse
+                font-thin
             "
             to="/events"
             >Events</router-link
@@ -63,6 +68,7 @@
                 px-2
                 bg-violet-100
                 hover:animate-pulse
+                font-thin
             "
             to="/about"
             >About</router-link
@@ -78,6 +84,7 @@
                 px-2
                 bg-violet-100
                 hover:animate-pulse
+                font-thin
             "
             to="/news"
             >India News</router-link

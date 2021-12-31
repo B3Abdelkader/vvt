@@ -4,14 +4,13 @@
             card
             m-1
             cursor-pointer
-            border border-gray-400
+            border border-gray-300
             rounded-lg
             hover:shadow-md hover:border-opacity-0
             transform
             hover:-translate-y-1
             transition-all
             duration-200
-            
         "
     >
         <div class="m-3">
@@ -27,8 +26,6 @@
                         px-2
                         align-top
                         float-right
-                        animate-pulse
-                        
                     "
                     >{{ news.publishedAt }}</span
                 >
