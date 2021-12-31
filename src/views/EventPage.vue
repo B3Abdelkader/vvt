@@ -24,7 +24,8 @@
                 rel="prev"
                 v-if="page != 1"
             >
-                <img src="src\assets\arrow-angle-left-solid-svgrepo-com.svg" />
+            <span>Previous</span>>
+                <!-- <img src="..\src\assets\arrow-angle-left-solid-svgrepo-com.svg" /> -->
             </router-link>
             <router-link
                 class="
@@ -41,7 +42,7 @@
                 rel="next"
                 v-if="page < 12"
             >
-                <img src="src\assets\arrow-angle-right-solid-svgrepo-com.svg" />
+                <span>Next</span>>
             </router-link>
         </div>
     </div>
