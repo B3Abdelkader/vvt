@@ -1,21 +1,12 @@
 <template>
-    <div class="grid min-h-screen grid-cols-1 place-items-center place-content-start">
-        <p
-            class="
-            pt-6
-                rounded-md
-                shadow-sm
-                text-xl
-                font-thin
-                inline
-                px-2
-                py-2
-            "
-        >
-            {{ error }}
-        </p>
-        <div style="width: 5%; height: 5%">
-            <img src="https://i.imgur.com/gOmjRel.png" />
+    <div class="pt-6 grid min-h-screen grid-cols-1 place-items-center place-content-start">
+                    <div class="py-3 px-5 mb-4 bg-red-100 text-red-900 text-lg font-thin rounded-md border border-red-200" role="alert">
+                                    {{ error }}
+                    </div>
+
+
+        <div style="width: 5%; height: 5%" class="shake-opacity shake-constant">
+            <img src="https://i.imgur.com/YxXnhM4.png" />
         </div>
     </div>
 </template>
