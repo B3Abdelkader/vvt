@@ -7,30 +7,26 @@
             :event="sEvent"
         />
     </div>
-    <div class="flex items-center">
-        <div class="flex m-auto space-x-2">
+    <div class="grid justify-items-center">
+        <div class="flex m-1 ">
             <router-link
-                class="
-                    justify-items-center
-                    flex
+                class="grid justify-items-end
                     px-2
                     py-1
                     text-gray-400
                     bg-gray-50
                     rounded-md
-                    hover:bg-blue-50 hover:text-white
+                    hover:bg-yellow-50 hover:text-white
                 "
                 :to="{ name: 'EventPage', query: { page: page - 1 } }"
                 rel="prev"
                 v-if="page != 1"
             >
-                <span>Previous</span>>
-                <!-- <img src="..\src\assets\arrow-angle-left-solid-svgrepo-com.svg" /> -->
+                <img src="https://i.imgur.com/UIKHtW3.png" style="width: 5%; height: 100%"/> <!-- Previous -->
             </router-link>
             <router-link
-                class="
-                    justify-items-center
-                    px-2
+                class="grid justify-items-start
+                px-2
                     py-1
                     text-gray-400
                     bg-gray-50
@@ -41,7 +37,7 @@
                 rel="next"
                 v-if="page < 12"
             >
-                <span>Next</span>>
+                <img src="https://i.imgur.com/dxKM6PJ.png" style="width: 5%; height: 100%"/> <!-- Next -->
             </router-link>
         </div>
     </div>

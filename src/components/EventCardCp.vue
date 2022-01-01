@@ -2,6 +2,7 @@
     <!-- Card ICI -->
     <router-link :to="{name: 'EventDetailPage', params:{id: event.id} }">
     <div class="grid justify-items-center select-none">
+        
         <div
             class="
                 max-w-xl
@@ -53,6 +54,7 @@
                     "
                     >{{ event.eventDate }}</span
                 >
+                
                 <span class="text-gray-400 text-sm">{{ event.message }}</span>
                 <!-- <p class="text-gray-500 leading-4" v-for="province in event.provinces" :key="province.id" :event="province">Provinces : {{event.province}};  </p> -->
             </div>
@@ -63,7 +65,6 @@
 
 <script>
 export default {
-    name: 'EventCardCp',
     props: {
         event: Object,
     },
