@@ -89,6 +89,22 @@
             to="/news"
             >India News</router-link
         >
+                <router-link
+            class="
+                inline-block
+                top-auto
+                text-gray-600
+                float-right
+                rounded-full
+                mx-1
+                px-2
+                bg-violet-100
+                hover:animate-pulse
+                font-thin
+            "
+            to="/event/create"
+            >Add Event</router-link
+        >
     </header>
     <router-view />
     <footer class="mt-16">
