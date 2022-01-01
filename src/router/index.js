@@ -7,7 +7,7 @@ import AboutCp from '/src/components/AboutCp.vue'
 import EventPage from '/src/views/EventPage.vue'
 import IndiaNewsPage from '/src/views/IndiaNewsPage.vue'
 import CreateEventPage from '/src/views/CreateEventPage.vue'
-import EventDetailPage from '/src/views/EventDetailPage.vue'
+import EventDetailPage from '/src/views/Event/DetailPage.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
 
 const routes = [{

@@ -7,12 +7,12 @@
             :event="sEvent"
         />
     </div>
-    <div class="flex h-screen">
+    <div class="flex items-center">
         <div class="flex m-auto space-x-2">
             <router-link
                 class="
+                    justify-items-center
                     flex
-                    items-center
                     px-2
                     py-1
                     text-gray-400
@@ -24,13 +24,12 @@
                 rel="prev"
                 v-if="page != 1"
             >
-            <span>Previous</span>>
+                <span>Previous</span>>
                 <!-- <img src="..\src\assets\arrow-angle-left-solid-svgrepo-com.svg" /> -->
             </router-link>
             <router-link
                 class="
-                    flex
-                    items-center
+                    justify-items-center
                     px-2
                     py-1
                     text-gray-400

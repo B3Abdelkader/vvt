@@ -191,7 +191,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #334a61;
+    color: #483361;
     background: #f8f9fa;
+    height: max-content;
 }
 </style>
