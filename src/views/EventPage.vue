@@ -35,7 +35,7 @@
                 "
                 :to="{ name: 'EventPage', query: { page: page + 1 } }"
                 rel="next"
-                v-if="page < 12"
+                v-if="page < 7"
             >
                 <img src="https://i.imgur.com/dxKM6PJ.png" style="width: 5%; height: 100%"/> <!-- Next -->
             </router-link>

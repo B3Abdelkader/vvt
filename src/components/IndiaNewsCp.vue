@@ -11,6 +11,7 @@
             hover:-translate-y-1
             transition-all
             duration-200
+            shake-opacity
         "
     >
         <div class="m-3">
@@ -21,6 +22,7 @@
                         text-sm text-blue-100
                         font-mono
                         bg-violet-600
+                        animate-pulse
                         inline
                         rounded-full
                         px-2
@@ -37,6 +39,7 @@
                     hover:text-gray-900
                     transition-all
                     duration-200
+                    shake-opacity
                 "
             >
                 {{ news.content }}

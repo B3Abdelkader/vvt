@@ -1,4 +1,5 @@
 <template>
+
     <div class="flex items-center justify-center py-5">
         <div
             class="
