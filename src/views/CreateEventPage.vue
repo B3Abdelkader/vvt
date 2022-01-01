@@ -188,6 +188,7 @@
                                     py-4
                                     px-6
                                     rounded
+                                    select-none
                                 "
                             >
                                 Submit
