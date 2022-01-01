@@ -55,7 +55,7 @@
                     >{{ event.eventDate }}</span
                 >
                 
-                <span class="text-gray-400 text-sm">{{ event.message }}</span>
+                <span class="text-gray-400 text-sm">{{ event.message.substring(0, 300) }} ...+[{{ event.message.length }}Char]</span>
                 <!-- <p class="text-gray-500 leading-4" v-for="province in event.provinces" :key="province.id" :event="province">Provinces : {{event.province}};  </p> -->
             </div>
         </div>
