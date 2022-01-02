@@ -71,7 +71,7 @@
                 font-thin
             "
             to="/about"
-            ><a-tooltip placement="topLeft" title="Prompt Text">About</a-tooltip></router-link
+            ><a-tooltip placement="topLeft" title="A propos">About</a-tooltip></router-link
         >
         
         <router-link

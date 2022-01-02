@@ -186,7 +186,7 @@
                             ></textarea>
                         </div>
                         <div class="mb-6">
-                            <button
+                            <a-button
                                 type="submit"
                                 class="
                                     bg-gray-100
@@ -200,9 +200,9 @@
                                     rounded
                                     select-none
                                 "
-                            >
+                            block>
                                 Submit
-                            </button>
+                            </a-button>
                         </div>
                         <p
                             class="text-base text-center text-gray-400"
@@ -248,6 +248,23 @@
             </div>
         </div>
     </div>
+      <div>
+    <a-button type="primary" block>
+      Primary
+    </a-button>
+    <a-button block>
+      Default
+    </a-button>
+    <a-button type="dashed" block>
+      Dashed
+    </a-button>
+    <a-button type="danger" block>
+      Danger
+    </a-button>
+    <a-button type="link" block>
+      Link
+    </a-button>
+  </div>
 </template>
 
 <script>
