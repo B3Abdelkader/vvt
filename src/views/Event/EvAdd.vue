@@ -186,23 +186,21 @@
                             ></textarea>
                         </div>
                         <div class="mb-6">
-                            <a-button
+                            <button
                                 type="submit"
                                 class="
-                                    bg-gray-100
-                                    border-b-2 border-teal-400
-                                    ml-2
-                                    hover:bg-teal-50
-                                    text-gray-600
+                                w-full
+                                    bg-indigo-400
+                                    border-b-4 border-indigo-500
+                                    hover:bg-indigo-500
+                                    text-white
                                     font-thin
-                                    py-4
-                                    px-6
                                     rounded
                                     select-none
                                 "
                             block>
                                 Submit
-                            </a-button>
+                            </button>
                         </div>
                         <p
                             class="text-base text-center text-gray-400"
@@ -214,57 +212,6 @@
         </div>
     </div>
     <div>{{ $store.state.events }}</div>
-    <div
-        class="
-            bg-teal-100
-            border-t-4 border-teal-500
-            rounded-b
-            text-teal-900
-            px-4
-            py-3
-            shadow-sm
-        "
-        role="alert"
-    >
-        <div class="flex">
-            <div class="py-1">
-                <svg
-                    class="fill-current h-6 w-6 text-teal-500 mr-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                >
-                    <path
-                        d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
-                    />
-                </svg>
-            </div>
-            <div>
-                <p class="font-semibold text-left">
-                    Our privacy policy has changed
-                </p>
-                <p class="text-sm font-thin text-left">
-                    Make sure you know how these changes affect you.
-                </p>
-            </div>
-        </div>
-    </div>
-      <div>
-    <a-button type="primary" block>
-      Primary
-    </a-button>
-    <a-button block>
-      Default
-    </a-button>
-    <a-button type="dashed" block>
-      Dashed
-    </a-button>
-    <a-button type="danger" block>
-      Danger
-    </a-button>
-    <a-button type="link" block>
-      Link
-    </a-button>
-  </div>
 </template>
 
 <script>
@@ -295,10 +242,13 @@ export default {
             this.$store
                 .dispatch('createEvent', event)
                 .then(() => {
-                    this.$router.push({
+                    //set timout
+                    setTimeout(() => {
+                        this.$router.push({
                         name: 'EventDetailPage',
                         params: { id: event.id },
                     })
+                    }, 2000)
                 })
                 .catch((error) => {
                     this.$router.push({

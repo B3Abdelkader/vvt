@@ -16,6 +16,9 @@ export default {
         return EventAPI.get('/events/' + id)
     },
     async postEvent(event) {
-        return await EventAPI.post('/events', event)
+        return await EventAPI.post('/events/', event)
+    },
+    async deleteEvent(id) {
+        return await EventAPI.delete('/events/' + id)
     }
 }

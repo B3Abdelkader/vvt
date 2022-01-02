@@ -4,10 +4,10 @@ import {
 } from "vue-router";
 import HomeCp from '/src/components/HomeCp.vue'
 import AboutCp from '/src/components/AboutCp.vue'
-import EventPage from '/src/views/EventPage.vue'
+import EventPage from '/src/views/Event/EvHome.vue'
 import IndiaNewsPage from '/src/views/IndiaNewsPage.vue'
-import CreateEventPage from '/src/views/CreateEventPage.vue'
-import EventDetailPage from '/src/views/Event/DetailPage.vue'
+import CreateEventPage from '/src/views/Event/EvAdd.vue'
+import EventDetailPage from '/src/views/Event/EvDetail.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
 
 const routes = [{

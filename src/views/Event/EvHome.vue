@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import EventCardCp from '../components/EventCardCp.vue'
+import EventCardCp from '../../components/EventCardCp.vue'
 import { watchEffect } from 'vue'
 
 export default {
