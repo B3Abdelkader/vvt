@@ -1,7 +1,7 @@
 <template>
 
     <div class="flex items-center justify-center py-5">
-EDIT HERE
+REGISTER HERE
     </div>
 </template>
 

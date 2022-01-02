@@ -212,6 +212,8 @@
         </div>
     </div>
     <div>{{ $store.state.events }}</div>
+
+
 </template>
 
 <script>
