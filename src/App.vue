@@ -71,8 +71,9 @@
                 font-thin
             "
             to="/about"
-            >About</router-link
+            ><a-tooltip placement="topLeft" title="Prompt Text">About</a-tooltip></router-link
         >
+        
         <router-link
             class="
                 inline-block
@@ -85,6 +86,7 @@
                 bg-violet-100
                 hover:animate-pulse
                 font-thin
+                hover:top-full
             "
             to="/news"
             >India News</router-link

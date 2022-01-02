@@ -28,13 +28,13 @@ const store = createStore({
             EventService.postEvent(event)
                 .then(() => {
                     // add vueX state
-                    commit('ADD_EVENTS', event)
+                    commit('ADD_EVENT', event)
                 })
                 .catch(error => {
                     console.log(error);
                     throw(error);
                 })
-            console.log('Event', this.event)
+            console.log('Event ADDED:', this.event)
         },
         fetchEvents({
             commit
@@ -73,5 +73,4 @@ const store = createStore({
         user,
     }
 })
-
 export default store

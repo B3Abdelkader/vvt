@@ -13,7 +13,15 @@
                 "
             >
                 <div class="text-left select-none">
-                    <h1 class="my-3 text-3xl text-gray-700 dark:text-gray-200">
+                    <h1
+                        class="
+                            my-3
+                            text-3xl text-gray-700
+                            dark:text-gray-200
+                            underline
+                            decoration-indigo-200
+                        "
+                    >
                         New Event!
                     </h1>
                     <p class="text-gray-400 dark:text-gray-400">
@@ -28,7 +36,8 @@
                                 placeholder="Select a category"
                                 class="
                                     w-full
-                                    text-gray-600
+                                    bg-gray-100
+                                    text-gray-400
                                     placeholder-gray-400
                                     h-10
                                     px-3
@@ -45,7 +54,7 @@
                                     value=""
                                     disabled
                                     selected
-                                    class="placeholder-gray-800"
+                                    class="placeholder-gray-300"
                                 >
                                     A category...
                                 </option>
@@ -68,7 +77,7 @@
                                 required
                                 class="
                                     w-full
-                                    bg-gray-200
+                                    bg-gray-100
                                     h-10
                                     px-3
                                     py-3
@@ -95,7 +104,7 @@
                                 required
                                 class="
                                     w-full
-                                    bg-gray-200
+                                    bg-gray-100
                                     h-10
                                     px-3
                                     py-2
@@ -121,7 +130,7 @@
                                 required
                                 class="
                                     w-full
-                                    bg-gray-200
+                                    bg-gray-100
                                     h-10
                                     px-3
                                     py-2
@@ -134,7 +143,9 @@
                                     focus:border-teal-200
                                 "
                             />
-                            <label for="phone" class="text-gray-400 select-none"
+                            <label
+                                for="phone"
+                                class="text-gray-400 select-none font-thin"
                                 >Phone number</label
                             >
                         </div>
@@ -179,8 +190,7 @@
                                 type="submit"
                                 class="
                                     bg-gray-100
-                                    border-b-2
-                                    border-teal-400
+                                    border-b-2 border-teal-400
                                     ml-2
                                     hover:bg-teal-50
                                     text-gray-600
@@ -296,7 +306,7 @@ export default {
         display: flex;
         align-items: center;
         padding-left: 10px;
-        transition: 300ms all;
+        transition: 50ms all;
     }
     input {
         &:valid + label,
