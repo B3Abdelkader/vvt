@@ -75,10 +75,16 @@ const routes = [
             },
         ],
     },
+    // {
+    //     path: '/event/:id',
+    //     redirect: () => { //(to) => { return name... , params: { id: to.params.id }} 
+    //         return { name: 'EventDetailPage'} //redirection vers la page d'un evenement en passant le parametre id, le code est simplifié ici
+    //     },
+    // },
     {
-        path: '/event/:id',
-        redirect: () => { //(to) => { return name... , params: { id: to.params.id }} 
-            return { name: 'EventDetailPage'} //redirection vers la page d'un evenement en passant le parametre id, le code est simplifié ici
+        path: '/event/:afterEvent(.*)',
+        redirect: (to) => { 
+            return { path: '/events/'+ to.params.afterEvent }
         },
     },
 ]
