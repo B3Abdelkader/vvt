@@ -1,7 +1,4 @@
-import {
-    createRouter,
-    createWebHistory
-} from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeCp from '/src/components/HomeCp.vue'
 import AboutCp from '/src/components/AboutCp.vue'
 import EventPage from '/src/views/Event/EvHome.vue'
@@ -13,7 +10,8 @@ import EventLayoutPage from '/src/views/Event/EvLayout.vue'
 import EditEventPage from '/src/views/Event/EvEdit.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
 
-const routes = [{
+const routes = [
+    {
         path: '/',
         name: 'HomeCp',
         component: HomeCp,
@@ -24,12 +22,17 @@ const routes = [{
         component: AboutCp,
     },
     {
+        path: '/about-us',
+        redirect: { name: 'AboutCp' }, //si je saisie /about-us je redirige vers /about, Exellent pour la SEO
+    },
+
+    {
         path: '/events',
         name: 'EventPage',
         component: EventPage,
-        props: route => ({
-            page: parseInt(route.query.page) || 1
-        }) //Si la page exist parse la valeur en Int, sinon affiche la page avec la valeur 1:page
+        props: (route) => ({
+            page: parseInt(route.query.page) || 1,
+        }), //Si la page exist parse la valeur en Int, sinon affiche la page avec la valeur 1:page
     },
     {
         path: '/events/create',
@@ -40,19 +43,21 @@ const routes = [{
         path: '/news',
         name: 'IndiaNewsPage',
         component: IndiaNewsPage,
+        alias: '/newsIndia', //alias pour la redirection, mauvais pour LA SEO, car contenu dans deux pages.
     },
     {
         path: '/error/:error',
         name: 'ErrorPage',
         props: true,
-        component: ErrorPage
+        component: ErrorPage,
     },
     {
         path: '/events/:id',
         name: 'EventLayoutPage',
         props: true,
         component: EventLayoutPage,
-        children: [{
+        children: [
+            {
                 path: '',
                 name: 'EventDetailPage',
                 component: EventDetailPage,
@@ -61,19 +66,25 @@ const routes = [{
                 path: 'edit',
                 name: 'EditEventPage',
 
-                component: EditEventPage
+                component: EditEventPage,
             },
             {
                 path: 'register',
                 name: 'RegisterEventPage',
-                component: RegisterEventPage
-            }
-        ]
-    }
+                component: RegisterEventPage,
+            },
+        ],
+    },
+    {
+        path: '/event/:id',
+        redirect: () => { //(to) => { return name... , params: { id: to.params.id }} 
+            return { name: 'EventDetailPage'} //redirection vers la page d'un evenement en passant le parametre id, le code est simplifié ici
+        },
+    },
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
 })
 export default router
