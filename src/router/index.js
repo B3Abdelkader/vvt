@@ -9,6 +9,7 @@ import EventDetailPage from '/src/views/Event/EvDetail.vue'
 import EventLayoutPage from '/src/views/Event/EvLayout.vue'
 import EditEventPage from '/src/views/Event/EvEdit.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
+import NotFound from '/src/views/NotFound.vue'
 
 const routes = [
     {
@@ -28,7 +29,7 @@ const routes = [
 
     {
         path: '/events',
-        name: 'EventPage',
+        name: 'EventsPage',
         component: EventPage,
         props: (route) => ({
             page: parseInt(route.query.page) || 1,
@@ -46,7 +47,7 @@ const routes = [
         alias: '/newsIndia', //alias pour la redirection, mauvais pour LA SEO, car contenu dans deux pages.
     },
     {
-        path: '/error/:error',
+        path: '/404/:error',
         name: 'ErrorPage',
         props: true,
         component: ErrorPage,
@@ -87,6 +88,11 @@ const routes = [
             return { path: '/events/'+ to.params.afterEvent }
         },
     },
+    {
+        path: '/:catchAll(.*)',// match toutes les routes non listé/existantes. 
+        name: 'NotFound',
+        component: NotFound,
+    }
 ]
 
 const router = createRouter({
