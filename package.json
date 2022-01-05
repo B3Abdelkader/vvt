@@ -12,6 +12,7 @@
     "@heroicons/vue": "^1.0.5",
     "axios": "^0.24.0",
     "linq": "^4.0.0",
+    "nprogress": "^0.2.0",
     "uuidv4": "^6.2.12",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",

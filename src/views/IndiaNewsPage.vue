@@ -31,6 +31,8 @@
 <script>
 import IndiaNewsCp from '../components/IndiaNewsCp.vue'
 import IndiaNewsService from '../services/IndiaNewsService.js'
+import NProgress from 'nprogress'
+
 import linq from 'linq'
 export default {
     name: 'IndiaNewsPage',
@@ -41,6 +43,7 @@ export default {
         }
     },
     beforeRouteEnter(to, from, next) {
+        NProgress.start(); //debut de la progress BAR
         IndiaNewsService.getNews()
             .then((response) => {
                 next(x => { //englober dans next pour que la vue soit chargée avant le chargement des données
@@ -52,6 +55,8 @@ export default {
             })})
             .catch((error) => {
                 console.error(error)
+            }).finally(() => {
+                NProgress.done(); //fin de la progress BAR
             })
     },
 }
