@@ -7,7 +7,23 @@ EDIT HERE
 
 <script>
 export default {
-    props: ['event']
+    props: ['event'],
+    data: function() {
+        return {
+            unsavedChanges: true
+        }
+    },
+    beforeRouteLeave(to, from, next) {
+        if (this.unsavedChanges) {
+            if (confirm('You have unsaved changes. Are you sure you want to leave this page?')) {
+                next();
+            } else {
+                next(false);
+            }
+        } else {
+            next();
+        }
+    },
 }
 </script>
 

@@ -57,6 +57,7 @@ export default {
             this.$store
                 .dispatch('fetchEvents', this.page) //L'acces page (this.page est reactif)
                 .catch((error) => {
+                    console.log("Error:"+error.ressponse.status);
                     if (error.response && error.ressponse.status === 404) {
                         this.$router.push({
                             name: 'ErrorPage',
