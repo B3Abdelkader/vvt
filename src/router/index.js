@@ -11,6 +11,7 @@ import EditEventPage from '/src/views/Event/EvEdit.vue'
 import ErrorPage from '/src/views/ErrorPage.vue'
 import NotFound from '/src/views/NotFound.vue'
 import NetworkErrorPage from '/src/views/NetworkError.vue'
+import NProgress from 'nprogress'
 
 const routes = [
     {
@@ -105,4 +106,13 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 })
+    //befor each route, stop the progress bar
+     router.beforeEach(() => {
+         NProgress.start()
+         })
+    //after each route, stop the progress bar
+    router.afterEach(() => {
+        NProgress.done()
+    })
+
 export default router
