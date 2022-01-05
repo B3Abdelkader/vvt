@@ -2,25 +2,11 @@
     <div class="flex items-center min-h-screen bg-gray-50 font-thin">
         <div class="container mx-auto">
             <div
-                class="
-                    max-w-md
-                    mx-auto
-                    bg-white
-                    p-5
-                    rounded-md
-                    shadow-sm
-                    text-left
-                "
+                class="max-w-md mx-auto bg-white p-5 rounded-md shadow-sm text-left"
             >
                 <div class="text-left select-none">
                     <h1
-                        class="
-                            my-3
-                            text-3xl text-gray-700
-                            dark:text-gray-200
-                            underline
-                            decoration-indigo-200
-                        "
+                        class="my-3 text-3xl text-gray-700 dark:text-gray-200 underline decoration-indigo-200"
                     >
                         New Event!
                     </h1>
@@ -34,20 +20,7 @@
                             <select
                                 v-model="event.category"
                                 placeholder="Select a category"
-                                class="
-                                    w-full
-                                    bg-gray-100
-                                    text-gray-400
-                                    placeholder-gray-400
-                                    h-10
-                                    px-3
-                                    rounded-md
-                                    font-thin
-                                    focus:outline-none
-                                    focus:ring
-                                    focus:ring-teal-50
-                                    focus:border-teal-200
-                                "
+                                class="w-full bg-gray-100 text-gray-400 placeholder-gray-400 h-10 px-3 rounded-md font-thin focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
                                 required
                             >
                                 <option
@@ -75,20 +48,7 @@
                                 name="name"
                                 id="name"
                                 required
-                                class="
-                                    w-full
-                                    bg-gray-100
-                                    h-10
-                                    px-3
-                                    py-3
-                                    text-gray-600
-                                    font-thin
-                                    rounded-md
-                                    focus:outline-none
-                                    focus:ring
-                                    focus:ring-teal-50
-                                    focus:border-teal-200
-                                "
+                                class="w-full bg-gray-100 h-10 px-3 py-3 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
                             />
                             <label for="name" class="text-gray-400 select-none"
                                 >Full Name</label
@@ -102,20 +62,7 @@
                                 name="email"
                                 id="email"
                                 required
-                                class="
-                                    w-full
-                                    bg-gray-100
-                                    h-10
-                                    px-3
-                                    py-2
-                                    text-gray-600
-                                    font-thin
-                                    rounded-md
-                                    focus:outline-none
-                                    focus:ring
-                                    focus:ring-teal-50
-                                    focus:border-teal-200
-                                "
+                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
                             />
                             <label for="email" class="text-gray-400 select-none"
                                 >Email Adress</label
@@ -128,20 +75,7 @@
                                 name="phone"
                                 id="phone"
                                 required
-                                class="
-                                    w-full
-                                    bg-gray-100
-                                    h-10
-                                    px-3
-                                    py-2
-                                    text-gray-600
-                                    font-thin
-                                    rounded-md
-                                    focus:outline-none
-                                    focus:ring
-                                    focus:ring-teal-50
-                                    focus:border-teal-200
-                                "
+                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
                             />
                             <label
                                 for="phone"
@@ -152,13 +86,7 @@
                         <div class="mb-6">
                             <label
                                 for="message"
-                                class="
-                                    block
-                                    mb-2
-                                    text-sm text-gray-600
-                                    dark:text-gray-400
-                                    select-none
-                                "
+                                class="block mb-2 text-sm text-gray-600 dark:text-gray-400 select-none"
                                 >Event description</label
                             >
                             <textarea
@@ -167,38 +95,16 @@
                                 name="message"
                                 id="message"
                                 placeholder="Your Message"
-                                class="
-                                    input-with-placeholder
-                                    w-full
-                                    px-3
-                                    py-2
-                                    bg-gray-100
-                                    font-thin
-                                    placeholder-gray-300
-                                    border border-gray-300
-                                    rounded-md
-                                    focus:outline-none
-                                    focus:ring
-                                    focus:ring-teal-50
-                                    focus:border-teal-100
-                                "
+                                class="input-with-placeholder w-full px-3 py-2 bg-gray-100 font-thin placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-100"
                                 required
                             ></textarea>
                         </div>
                         <div class="mb-6">
                             <button
                                 type="submit"
-                                class="
-                                w-full
-                                    bg-indigo-400
-                                    border-b-4 border-indigo-500
-                                    hover:bg-indigo-500
-                                    text-white
-                                    font-thin
-                                    rounded
-                                    select-none
-                                "
-                            block>
+                                class="w-full bg-indigo-400 border-b-4 border-indigo-500 hover:bg-indigo-500 text-white font-thin rounded select-none"
+                                block
+                            >
                                 Submit
                             </button>
                         </div>
@@ -212,8 +118,6 @@
         </div>
     </div>
     <div>{{ $store.state.events }}</div>
-
-
 </template>
 
 <script>
@@ -247,16 +151,22 @@ export default {
                     //set timout
                     setTimeout(() => {
                         this.$router.push({
-                        name: 'EventDetailPage',
-                        params: { id: event.id },
-                    })
+                            name: 'EventDetailPage',
+                            params: { id: event.id },
+                        })
                     }, 2000)
                 })
                 .catch((error) => {
-                    this.$router.push({
-                        name: 'ErrorPage',
-                        params: { error: error }, //error est transmis a 'ErrorPage' comme une props
-                    })
+                    if (error.response && error.response.status === 404) {
+                        this.$router.push({
+                            name: 'ErrorPage',
+                            params: { error: error }, //error est transmis a 'ErrorPage' comme une props
+                        })
+                    } else {
+                        this.$router.push({
+                            name: 'NetworkErrorPage',
+                        })
+                    }
                 })
         },
     },

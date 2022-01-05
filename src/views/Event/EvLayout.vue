@@ -63,11 +63,17 @@ export default {
     props: ['id'],
     created() {
         this.$store.dispatch('fetchEvent', this.id).catch((error) => {
-            this.$router.push({
-                name: 'ErrorPage',
-                params: { error: error }, //error est transmis a 'ErrorPage' comme une props
-            })
-        })
+                    if (error.response && error.response.status === 404) {
+                        this.$router.push({
+                            name: 'ErrorPage',
+                            params: { error: error }, //error est transmis a 'ErrorPage' comme une props
+                        })
+                    } else {
+                        this.$router.push({
+                            name: 'NetworkErrorPage',
+                        })
+                    }
+                })
         console.log('ID?' + this.id)
     },
     computed: {

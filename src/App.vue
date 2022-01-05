@@ -104,7 +104,7 @@
                 hover:animate-pulse
                 font-thin
             "
-            to="/event/register"
+            to="/event/create"
             >Add Event</router-link
         >
     </header>

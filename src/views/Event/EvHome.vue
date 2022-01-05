@@ -18,7 +18,7 @@
                     rounded-md
                     hover:bg-yellow-50 hover:text-white
                 "
-                :to="{ name: 'EventPage', query: { page: page - 1 } }"
+                :to="{ name: 'EventsPage', query: { page: page - 1 } }"
                 rel="prev"
                 v-if="page != 1"
             >
@@ -33,7 +33,7 @@
                     rounded-md
                     hover:bg-blue-50 hover:text-white
                 "
-                :to="{ name: 'EventPage', query: { page: page + 1 } }"
+                :to="{ name: 'EventsPage', query: { page: page + 1 } }"
                 rel="next"
                 v-if="page < 7"
             >
@@ -48,7 +48,7 @@ import EventCardCp from '../../components/EventCardCp.vue'
 import { watchEffect } from 'vue'
 
 export default {
-    name: 'eventPage',
+    name: 'EventsPage',
     props: ['page'],
     components: { EventCardCp },
     created() {
@@ -57,10 +57,16 @@ export default {
             this.$store
                 .dispatch('fetchEvents', this.page) //L'acces page (this.page est reactif)
                 .catch((error) => {
-                    this.$router.push({
-                        name: 'ErrorPage',
-                        params: { error: error }, //error est transmis a 'ErrorPage' comme une props.
-                    })
+                    if (error.response && error.ressponse.status === 404) {
+                        this.$router.push({
+                            name: 'ErrorPage',
+                            params: { error: error }, //error est transmis a 'ErrorPage' comme une props
+                        })
+                    } else {
+                        this.$router.push({
+                            name: 'NetworkErrorPage',
+                        })
+                    }
                 })
         })
     },
