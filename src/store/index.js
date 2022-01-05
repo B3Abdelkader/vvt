@@ -1,7 +1,6 @@
 import {
     createStore
 } from "vuex";
-import user from "../store/modules/user.js"
 import EventService from '../services/EventService.js'
 
 const store = createStore({
@@ -68,9 +67,6 @@ const store = createStore({
                     })
             }
         }
-    },
-    modules: {
-        user,
     }
 })
 export default store
