@@ -40,15 +40,16 @@ export default {
             NewsObject: null,
         }
     },
-    created() {
+    beforeRouteEnter(to, from, next) {
         IndiaNewsService.getNews()
             .then((response) => {
-                this.NewsObject = linq
+                next(x => { //englober dans next pour que la vue soit chargée avant le chargement des données
+                    x.NewsObject = linq
                     .from(response.data.articles)
                     .where((x) => x.content)
                     .toArray() //je recupere uniquement les articles avec du contenu!
                 console.log(response.data.articles)
-            })
+            })})
             .catch((error) => {
                 console.error(error)
             })

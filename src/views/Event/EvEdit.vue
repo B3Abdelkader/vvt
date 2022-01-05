@@ -16,12 +16,12 @@ export default {
     beforeRouteLeave(to, from, next) {
         if (this.unsavedChanges) {
             if (confirm('You have unsaved changes. Are you sure you want to leave this page?')) {
-                next();
+                next();//confirmation la navigation
             } else {
-                next(false);
+                next(false); //cancellation de la navigation
             }
         } else {
-            next();
+            next();//canceler la navigation
         }
     },
 }
