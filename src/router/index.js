@@ -106,8 +106,13 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
     scrollBehavior() {
+        // if(savedPosition) {
+        //     return savedPosition
+        // }
+        // else{
         //return top 0
         return { top: 0 }
+    // }
     },
 })
 //befor each route, stop the progress bar
