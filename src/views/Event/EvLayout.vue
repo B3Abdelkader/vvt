@@ -1,6 +1,9 @@
 <template>
     <div v-if="event">
         <div id="nav">
+            <h1 id="flashMessage" v-if="GlobalStore.flashMessage">
+{{ GlobalStore.flashMessage }}
+</h1>
             <router-link
                 class="
                     inline-block
@@ -61,6 +64,7 @@
 <script>
 export default {
     props: ['id'],
+    inject: ['GlobalStore'],
     created() {
         this.$store.dispatch('fetchEvent', this.id).catch((error) => {
                     if (error.response && error.response.status === 404) {
@@ -86,4 +90,14 @@ export default {
 </script>
 
 <style>
+@keyframes yellowFade {
+    from{
+    background: yellow;}
+    to{ background: transparent;}
+}
+#flashMessage {
+    animation-name: yellowFade;
+        animation-duration: 3s;
+}
+
 </style>

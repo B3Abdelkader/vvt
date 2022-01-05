@@ -1,7 +1,9 @@
-import { createApp } from 'vue'
+import { createApp, reactive } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import './index.css'
 
-createApp(App).use(router).use(store).mount('#app')
+const GlobalStore = reactive({flashMessage: ''})
+
+createApp(App).use(router).provide('GlobalStore', GlobalStore).use(store).mount('#app')
