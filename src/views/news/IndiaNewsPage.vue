@@ -29,9 +29,8 @@
 </template>
 
 <script>
-import IndiaNewsCp from '../components/IndiaNewsCp.vue'
-import IndiaNewsService from '../services/IndiaNewsService.js'
-import NProgress from 'nprogress'
+import IndiaNewsCp from '../../components/IndiaNewsCp.vue'
+import IndiaNewsService from '../../services/IndiaNewsService.js'
 
 import linq from 'linq'
 export default {
