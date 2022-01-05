@@ -50,7 +50,7 @@
 
 <script>
 export default {
-    name: 'IndianNewsCp',
+    name: 'NewsCp',
     props: {
         news: {
             type: Object,

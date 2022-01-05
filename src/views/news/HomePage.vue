@@ -20,7 +20,7 @@
     </div>
 
     <div class="grid grid-cols-4 pt-4">
-        <IndiaNewsCp
+        <NewsCp
             v-for="item in NewsObject"
             :key="item.source.id"
             :news="item"
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import IndiaNewsCp from '../../components/IndiaNewsCp.vue'
-import IndiaNewsService from '../../services/IndiaNewsService.js'
+import NewsCp from '../../components/NewsCp.vue'
+import IndiaNewsService from '../../services/NewsService.js'
 
 import linq from 'linq'
 export default {
-    name: 'IndiaNewsPage',
-    components: { IndiaNewsCp },
+    name: 'HomePage',
+    components: { NewsCp },
     data() {
         return {
             NewsObject: null,

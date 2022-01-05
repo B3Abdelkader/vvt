@@ -10,7 +10,7 @@ var NewsAPI = axios.create({
 
 export default {
     async getNews() {
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 2500));
         return await NewsAPI.get()
     }
 }
