@@ -85,34 +85,38 @@ const routes = [
     },
     // {
     //     path: '/event/:id',
-    //     redirect: () => { //(to) => { return name... , params: { id: to.params.id }} 
+    //     redirect: () => { //(to) => { return name... , params: { id: to.params.id }}
     //         return { name: 'EventDetailPage'} //redirection vers la page d'un evenement en passant le parametre id, le code est simplifié ici
     //     },
     // },
     {
         path: '/event/:afterEvent(.*)',
-        redirect: (to) => { 
-            return { path: '/events/'+ to.params.afterEvent }
+        redirect: (to) => {
+            return { path: '/events/' + to.params.afterEvent }
         },
     },
     {
-        path: '/:catchAll(.*)',// match toutes les routes non listé/existantes. 
+        path: '/:catchAll(.*)', // match toutes les routes non listé/existantes.
         name: 'NotFound',
         component: NotFound,
-    }
+    },
 ]
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior() {
+        //return top 0
+        return { top: 0 }
+    },
 })
-    //befor each route, stop the progress bar
-     router.beforeEach(() => {
-         NProgress.start()
-         })
-    //after each route, stop the progress bar
-    router.afterEach(() => {
-        NProgress.done()
-    })
+//befor each route, stop the progress bar
+router.beforeEach(() => {
+    NProgress.start()
+})
+//after each route, stop the progress bar
+router.afterEach(() => {
+    NProgress.done()
+})
 
 export default router
