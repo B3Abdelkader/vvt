@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeCp from '/src/components/HomeCp.vue'
+import HomeCp from '/src/views/IndexPage.vue'
 import AboutCp from '/src/components/AboutCp.vue'
 import EventsPage from '/src/views/event/HomePage.vue'
 import IndiaNewsPage from '/src/views/news/HomePage.vue'
