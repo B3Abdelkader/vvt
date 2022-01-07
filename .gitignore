@@ -4,7 +4,7 @@ dist
 dist-ssr
 *.local
 Thumbs.db
-db.json
+# db.json
 *.log
 public/
 .deploy*/
