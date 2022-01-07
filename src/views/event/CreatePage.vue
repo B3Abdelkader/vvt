@@ -20,7 +20,7 @@
                             <select
                                 v-model="event.category"
                                 placeholder="Select a category"
-                                class="w-full bg-gray-100 text-gray-400 placeholder-gray-400 h-10 px-3 rounded-md font-thin focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
+                                class="w-full bg-gray-100 text-gray-400 placeholder-gray-400 h-10 px-3 rounded-md font-thin focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300"
                                 required
                             >
                                 <option
@@ -48,7 +48,7 @@
                                 name="name"
                                 id="name"
                                 required
-                                class="w-full bg-gray-100 h-10 px-3 py-3 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
+                                class="w-full bg-gray-100 h-10 px-3 py-3 text-gray-600 rounded-md focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300"
                             />
                             <label for="name" class="text-gray-400 select-none"
                                 >Full Name</label
@@ -62,7 +62,7 @@
                                 name="email"
                                 id="email"
                                 required
-                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
+                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300"
                             />
                             <label for="email" class="text-gray-400 select-none"
                                 >Email Adress</label
@@ -75,7 +75,7 @@
                                 name="phone"
                                 id="phone"
                                 required
-                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
+                                class="w-full bg-gray-100 h-10 px-3 py-2 text-gray-600 font-thin rounded-md focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300"
                             />
                             <label
                                 for="phone"
@@ -95,7 +95,7 @@
                                 name="message"
                                 id="message"
                                 placeholder="Your Message"
-                                class="input-with-placeholder w-full px-3 py-2 bg-gray-100 font-thin placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-100"
+                                class="input-with-placeholder w-full px-3 py-2 bg-gray-100 font-thin placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-300"
                                 required
                             ></textarea>
                         </div>
