@@ -5,6 +5,7 @@ import store from './store'
 import { MotionOnePlugin } from 'vue-motion-one'
 import './index.css'
 import 'nprogress/nprogress.css'
+import '@themesberg/flowbite';
 
 const GlobalStore = reactive({flashMessage: ''})
 
