@@ -105,6 +105,8 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+    linkActiveClass: 'active',
+    linkExactActiveClass: 'active',
     scrollBehavior() {
         // if(savedPosition) {
         //     return savedPosition
