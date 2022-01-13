@@ -1,66 +1,47 @@
 <template>
-  <!-- <div class="relative overflow-hidden w-56 h-56 bg-white border">
-    <div class="absolute left-0 top-0 h-16 w-16">
-      <div
-        class="absolute transform -rotate-45 bg-gray-600 text-center text-white font-semibold py-1 left-[-34px] top-[32px] w-[170px]"
-      >
-        Popular
+  <div class="hero min-h-screen bg-base-200">
+    <div class="flex-col justify-center hero-content lg:flex-row">
+      <div class="text-center lg:text-left">
+        <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+        <p class="mb-5">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+          exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+        </p>
       </div>
-    </div>
-  </div> -->
-
-  <div class="flex items-center min-h-screen bg-gray-50 font-bold">
-    <div class="container mx-auto">
-      <div class="max-w-md mx-auto bg-white p-5 rounded-md shadow-sm text-left">
-        <div class="text-left select-none">
-          <h1
-            class="my-3 text-3xl text-gray-700 dark:text-gray-200 underline decoration-indigo-200 font-bold"
-          >
-            LogIn
-          </h1>
-        </div>
-        <div class="m-7">
-          <form @submit.prevent="onSubmit" id="form">
-            <div class="mb-7 input-with-placeholder">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                class="w-full bg-gray-100 h-30 px-3 py-3 text-gray-600 rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
-              />
-              <label for="name" class="text-gray-400 select-none">UserName</label>
-            </div>
-            <div class="mb-7 input-with-placeholder">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                class="w-full bg-gray-100 h-30 px-3 py-3 text-gray-600 rounded-md focus:outline-none focus:ring focus:ring-teal-50 focus:border-teal-200"
-              />
-              <label for="password" class="text-gray-400 select-none">Password</label>
-            </div>
-            <div class="mb-6">
-              <button
-                type="submit"
-                class="w-full bg-indigo-400 border-b-4 border-indigo-500 hover:bg-indigo-500 text-white rounded select-none font-bold"
-                block
-              >
-                Se Connecter
-              </button>
-            </div>
-            <p class="text-base text-center text-gray-400" id="result"></p>
-          </form>
+      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">E-Mail</span>
+            </label>
+            <input type="text" placeholder="E-mail" class="input input-bordered" />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Password</span>
+            </label>
+            <input
+              type="password"
+              name="phone"
+              id="phone"
+              required
+              placeholder="Password"
+              class="input input-bordered"
+            />
+            <label class="label">
+              <a href="#" class="label-text-alt">Forgot password?</a>
+            </label>
+          </div>
+          <div class="form-control mt-6">
+            <input type="button" value="Login" class="btn btn-primary" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-
-</script>
+<script></script>
 
 <style lang="scss">
 .input-with-placeholder {

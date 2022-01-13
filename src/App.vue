@@ -1,12 +1,7 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
-
 <template>
   <div class="navbar mb-2 shadow-sm bg-gray-50 text-base-content rounded-box">
     <div class="px-2 mx-2 navbar-start">
-      <span class="text-lg font-bold"> B3Abdelkader </span>
+      <span class="text-lg font-bold select-none"> B3Abdelkader </span>
     </div>
     <div class="hidden px-2 mx-2 navbar-end lg:flex md:flex">
       <div class="flex items-stretch">
@@ -79,7 +74,7 @@
       </div>
     </div>
     <div>
-      <p>Copyright © 2021 - All right reserved by ACME Industries Ltd</p>
+      <p>Copyright © 2022 - All right reserved by</p>
     </div>
   </footer>
 </template>
@@ -95,6 +90,5 @@
   text-align: center;
   color: #483361;
   background: #f8f9fa;
-  height: max-content;
 }
 </style>
