@@ -1,18 +1,16 @@
 <template>
-  <div
-    class="pt-4"
-  >
+  <div class="pt-4">
     <p class="font-thin">
       <img
         src="https://i.imgur.com/MckKMNJ.png"
         style="width: 5%; height: 5%; display: inline"
-            v-animate
-    :keyframes="{
-      transform: 'scale(0.7)',
-    }"
-    :options="{
-      duration: 2,
-    }"
+        v-animate
+        :keyframes="{
+          transform: 'scale(0.7)',
+        }"
+        :options="{
+          duration: 2,
+        }"
       />
       News from
       <span

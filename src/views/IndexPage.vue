@@ -1,5 +1,5 @@
 <template>
-  <div class="hero min-h-screen bg-base-200">
+  <div class="hero min-h-full bg-base-200">
     <div class="flex-col justify-center hero-content lg:flex-row">
       <div class="text-center lg:text-left">
         <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
@@ -33,7 +33,7 @@
             </label>
           </div>
           <div class="form-control mt-6">
-            <input type="button" value="Login" class="btn btn-primary" />
+            <input type="button" value="Login" class="btn btn-outline btn-primary" />
           </div>
         </div>
       </div>
