@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center min-h-screen bg-gray-50 font-thin">
     <div class="container mx-auto">
-      <div class="max-w-xl mx-auto bg-white p-5 rounded-md shadow-sm text-left">
+      <div class="max-w-lg mx-auto bg-white p-5 rounded-md shadow-sm text-left">
         <div class="text-left select-none">
           <h1
             class="my-4 text-3xl text-gray-700 dark:text-gray-200 underline decoration-indigo-200"
@@ -14,16 +14,12 @@
         </div>
         <div class="m-7">
           <form @submit.prevent="onSubmit" id="form">
-            <div class="mb-7 input-with-placeholder">
-              <select
-                v-model="event.category"
-                placeholder="Select a category"
-                class="input input-bordered w-full"
-                required
-              >
-                <option value="" disabled selected class="placeholder-gray-300">
-                  A category...
-                </option>
+            <div class="form-control w-full">
+              <label class="label">
+                <a href="#" class="label-text-alt"> Event type... </a>
+              </label>
+              <select class="select select-bordered w-full font-thin text-gray-500">
+                <option disabled="" selected="">Choose a type</option>
                 <option
                   v-for="option in categories"
                   :value="option.toLowerCase()"
@@ -33,6 +29,10 @@
                   {{ option }}
                 </option>
               </select>
+              <label class="label">
+                <a href="#" class="label-text-alt"></a>
+                <a href="#" class="label-text-alt">Need hint?</a>
+              </label>
             </div>
             <div class="mb-7 input-with-placeholder">
               <input

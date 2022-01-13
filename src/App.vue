@@ -1,21 +1,23 @@
 <template>
-  <div class="navbar mb-2 shadow-sm bg-gray-50 text-base-content rounded-box">
+  <div class="navbar mb-2 shadow-sm bg-gray-50 rounded-box">
     <div class="px-2 mx-2 navbar-start">
-      <span class="text-lg font-bold select-none"> B3Abdelkader </span>
+      <span class="text-lg font-thin select-none"> B3Abdelkader </span>
     </div>
     <div class="hidden px-2 mx-2 navbar-end lg:flex md:flex">
       <div class="flex items-stretch">
         <router-link to="/"
-          ><a class="btn btn-ghost btn-sm rounded-btn"> Home </a></router-link
+          ><a class="btn btn-ghost btn-sm rounded-btn font-thin"> Home </a></router-link
         >
         <router-link to="/events"
-          ><a class="btn btn-ghost btn-sm rounded-btn"> Events </a></router-link
+          ><a class="btn btn-ghost btn-sm rounded-btn font-thin"> Events </a></router-link
         >
         <router-link to="/news"
-          ><a class="btn btn-ghost btn-sm rounded-btn"> News </a></router-link
+          ><a class="btn btn-ghost btn-sm rounded-btn font-thin"> News </a></router-link
         >
         <router-link to="/event/create"
-          ><a class="btn btn-ghost btn-sm rounded-btn"> Add Event </a></router-link
+          ><a class="btn btn-ghost btn-sm rounded-btn font-thin">
+            Add Event
+          </a></router-link
         >
       </div>
     </div>
