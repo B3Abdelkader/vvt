@@ -22,6 +22,19 @@ module.exports = {
 
    plugins: [
      require('daisyui'),
-    ],
+    ],    // config (optional)
+    daisyui: {
+      themes: [
+        'emerald', // first one will be the default theme
+        'forest',
+        'synthwave'
+      ],
+      styled: true,
+      themes: false,
+      base: true,
+      utils: true,
+      logs: true,
+      rtl: false,
+    },
 
  }
