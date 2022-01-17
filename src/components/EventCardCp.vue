@@ -1,7 +1,7 @@
 <template>
   <!-- Card ICI -->
   <router-link :to="{ name: 'EventDetailPage', params: { id: event.id } }">
-    <div class="grid justify-items-center select-none">
+    <div class="grid justify-items-center select-none grid-">
       <div class="max-w-xl justify-items-center bg-white rounded-xl p-2 shadow-md m-2">
         <div class="flex flex-col w-full">
           <div class="flex flex-row justify-between">
