@@ -17,7 +17,11 @@
           >
             Innovative analytics<br class="hidden md:block" />
             that you
-            <span class="inline-block text-deep-purple-accent-400">will love</span>
+            <span class="inline-block text-deep-purple-accent-400">will love </span>
+            <span class="relative inline-block px-1">
+              <div class="absolute inset-0 transform -skew-x-12 bg-teal-accent-400"></div>
+              <span class="relative text-teal-900">lazy dog</span>
+            </span>
           </h2>
           <p class="text-base text-gray-700 md:text-lg">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

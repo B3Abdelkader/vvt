@@ -1,27 +1,19 @@
 <template>
-  <div
-    class="card m-1 cursor-pointer border border-gray-300 rounded-lg hover:shadow-md hover:border-opacity-0 transform hover:-translate-y-1 transition-all duration-200"
-    v-animate
-    :keyframes="{
-      y: -10,
-      opacity: 1,
-    }"
-    :options="{
-      duration: 0.5,
-      easing: [0.22, 0.03, 0.26, 1],
-    }"
-  >
-    <div class="m-3">
-      <h2 class="text-lg mb-2">
-        {{ news.title }}
-        <span
-          class="text-sm text-blue-100 font-mono bg-violet-600 animate-pulse inline rounded-full px-2 align-top float-right"
-          >{{ news.publishedAt }}</span
-        >
-      </h2>
-      <p
-        class="font-light font-mono text-sm text-gray-700 hover:text-gray-900 transition-all duration-200"
+  <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
+    <a href="/" aria-label="Article"
+      ><img :src="news.urlToImage" class="object-cover w-full h-64 rounded" alt=""
+    /></a>
+    <div class="py-5">
+      <p class="mb-2 text-xs font-semibold text-gray-600 uppercase">
+        {{ news.publishedAt }}
+      </p>
+      <a
+        href="/"
+        aria-label="Article"
+        class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
+        ><p class="text-2xl font-bold leading-5">{{ news.title }}</p></a
       >
+      <p class="mb-4 text-gray-700">
         {{ news.content }}
       </p>
     </div>

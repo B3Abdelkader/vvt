@@ -6,7 +6,20 @@
           <h1
             class="my-4 text-3xl text-gray-700 dark:text-gray-200 underline decoration-indigo-200"
           >
-            New Event!
+            <h1
+              class="flex self-center max-w-lg mb-6 font-sans text-6xl select-none font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+            >
+              Create<!--<br class="hidden md:block" /> -->
+
+              <span class="relative px-1">
+                <div
+                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
+                ></div>
+                <span class="relative inline-block text-deep-purple-accent-400"
+                  >Event</span
+                >
+              </span>
+            </h1>
           </h1>
           <p class="text-gray-400 dark:text-gray-400">
             Fill up the form below to add your Event.

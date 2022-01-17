@@ -13,15 +13,16 @@
         }"
       />
       News from
-      <span
-        class="inline bg-teal-100 text-sm text-gray-900 rounded dark:bg-gray-600 dark:text-gray-200"
-        >India-IN</span
-      >:
+      <span class="inline bg-teal-100 text-sm text-white rounded">India-IN</span>:
     </p>
   </div>
 
-  <div class="grid grid-cols-4 pt-4">
-    <NewsCp v-for="item in NewsObject" :key="item.source.id" :news="item" />
+  <div
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+      <NewsCp v-for="item in NewsObject" :key="item.source.id" :news="item" />
+    </div>
   </div>
 </template>
 

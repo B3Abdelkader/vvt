@@ -1,8 +1,24 @@
 <template>
-  <div>
-    <h1 class="text-6xl select-none">Actual events</h1>
-    <EventCardCp v-for="sEvent in events" :key="sEvent.id" :event="sEvent" />
+  <h1
+    class="flex self-center max-w-lg mb-6 font-sans text-6xl select-none font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+  >
+    Actual<!--<br class="hidden md:block" /> -->
+
+    <span class="relative px-1">
+      <div
+        class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
+      ></div>
+      <span class="relative inline-block text-deep-purple-accent-400">Events</span>
+    </span>
+  </h1>
+  <div
+    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
+    <div class="grid max-w-screen-lg row-gap-6 sm:mx-auto lg:grid-cols-2">
+      <EventCardCp v-for="sEvent in events" :key="sEvent.id" :event="sEvent" />
+    </div>
   </div>
+
   <div class="grid justify-items-center">
     <div class="flex m-1">
       <div class="btn-group">
@@ -13,6 +29,7 @@
           v-if="page != 1"
           >Previous Page
         </router-link>
+
         <router-link
           class="btn btn-outline btn-wide"
           :to="{ name: 'EventsPage', query: { page: page + 1 } }"

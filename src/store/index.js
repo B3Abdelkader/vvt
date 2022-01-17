@@ -38,7 +38,7 @@ const store = createStore({
         fetchEvents({
             commit
         }, page) { // le parametre est envoyé depuis le fetch event sur le componentPage.vue
-            return EventService.getEvents(3, page)
+            return EventService.getEvents(4, page)
                 .then((response) => {
                     commit('SET_EVENTS', response.data)
                     console.log(response.data)
