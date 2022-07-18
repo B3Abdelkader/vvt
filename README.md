@@ -10,4 +10,3 @@ https://tailblocks.cc
 https://kitwind.io/products/kometa/components/headers
 https://devdojo.com/tails/app#_
 https://layoutsfortailwind.lalokalabs.dev/ui/fixed-screen/
-

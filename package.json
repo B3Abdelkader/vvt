@@ -11,7 +11,7 @@
     "@headlessui/vue": "^1.4.2",
     "@heroicons/vue": "^1.0.5",
     "axios": "^0.24.0",
-    "daisyui": "^1.22.0",
+    "daisyui": "^2.19.0",
     "linq": "^4.0.0",
     "motion": "^10.5.0",
     "nprogress": "^0.2.0",
